@@ -9,10 +9,23 @@ const App = () => {
 
     console.log(i) //still you can value from i outside of for scope which is 5.
   }
-
+  sayHello();
   //var -> function
   //let -> block, reassigned variable
   //const -> block, it can not change, constant
+
+  //object
+  const person = {
+    name: 'Terry', 
+    eat: function() {}, //eat and talk are method
+    talk() {}
+  };
+
+  console.log(person.name);
+
+
+
+
 
   return (
     <div>
