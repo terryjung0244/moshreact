@@ -2,30 +2,38 @@ import React from 'react'
 
 const App = () => {
 
-  function sayHello() {
-    for (var i = 0; i < 5; i++) {
-      console.log(i)
-    }
+  // function sayHello() {
+  //   for (var i = 0; i < 5; i++) {
+  //     console.log(i)
+  //   }
 
-    console.log(i) //still you can value from i outside of for scope which is 5.
-  }
-  sayHello();
-  //var -> function
-  //let -> block, reassigned variable
-  //const -> block, it can not change, constant
+  //   console.log(i) //still you can value from i outside of for scope which is 5.
+  // }
+  // sayHello();
+  // //var -> function
+  // //let -> block, reassigned variable
+  // //const -> block, it can not change, constant
 
-  //object
+  // //object
+  // const person = {
+  //   name: 'Terry', 
+  //   eat: function() {}, //eat and talk are method
+  //   talk() {}
+  // };
+
+  // console.log(person.name);
+
+  //The this keyword
   const person = {
-    name: 'Terry', 
-    eat: function() {}, //eat and talk are method
-    talk() {}
+    name: 'Terry',
+    eat() {
+      console.log(this);
+    }
   };
 
-  console.log(person.name);
-
-
-
-
+  person.eat();
+  const eat = person.eat;
+  eat();
 
   return (
     <div>
