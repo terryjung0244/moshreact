@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+const App = () => {
+
+  function sayHello() {
+    for (var i = 0; i < 5; i++) {
+      console.log(i)
+    }
+
+    console.log(i) //still you can value from i outside of for scope which is 5.
+  }
+
+  //var -> function
+  //let -> block, reassigned variable
+  //const -> block, it can not change, constant
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      App
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
