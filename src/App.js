@@ -32,7 +32,7 @@ const App = () => {
   };
 
   person.eat();
-  const eat = person.eat;
+  const eat = person.eat.bind(person);
   eat();
 
   return (
